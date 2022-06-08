@@ -8,13 +8,16 @@
     --secondary-bcg: #F5F4FA;
     --accent-bcg: #2F303A;
 }    
-body {
+body {  
     color: var(--primary-text-color);
     background-color: var(--primary-bcg);
     font-family: Roboto, sans-serif;
     font-style: normal;
 }
 ul {
+    padding: 0;
+    margin: 0;
+    
     list-style: none;
 } 
 a {
@@ -23,12 +26,18 @@ a {
 h1,h2,h3,h4,h5,h6 {
     color: var(--title-text-color);
 }
-
-/* header+footer */
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/* header */
 .page-header {
     background-color: var(--primary-bcg);
 }
 .logo {
+    margin-right: 93px;
+    
     color: var(--accent-color);
     font-family: Raleway, sans-serif;
     font-weight: 700;
@@ -38,6 +47,27 @@ h1,h2,h3,h4,h5,h6 {
 }
 .accent {
     color: var(--black-color);
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+.site-nav {
+    display: flex;
+}
+.site-nav li+li {
+    margin-left: 50px;
+}
+.site-nav a {
+    display: block;
+    padding: 21px 0;
+}
+.auth-nav {
+    display: flex;
+    margin-left: auto;
+}
+.auth-nav li+li {
+    margin-left: 50px;
 }
 .nav-link {
     color: var(--title-text-color);
@@ -64,7 +94,7 @@ h1,h2,h3,h4,h5,h6 {
 .contacts-link-bottom:focus {
     color: var(--accent-color);
 }
-
+/* footer */
 .page-footer {
     background-color: var(--accent-bcg);
 }
@@ -88,25 +118,18 @@ h1,h2,h3,h4,h5,h6 {
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-
-/* index.html+button */
-.index-hero {
-    background-color: var(--accent-bcg);
-}
-.index-hero-title {
-    color: var(--white-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
+/* button */
 .button {
     font-family: inherit;
     cursor: pointer;
+    border: transparent;
 }
 .primary {
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 4px;
+    margin: 0 auto;
+
     color: var(--white-color);
     background-color: var(--accent-color);
     font-weight: 700;
@@ -118,6 +141,10 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.06em;
 }
 .secondary {
+    display: inline-block;
+    padding: 6px 22px;
+    border-radius: 4px;
+
     color: var(--title-text-color);
     background-color: var(--secondary-bcg);
     font-weight: 500;
@@ -131,8 +158,30 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--white-color);
     background-color: var(--accent-color);
 }
+/* index.html */
+.index-hero {
+    background-color: var(--accent-bcg);
+}
+.index-hero-title {
+    margin: 0px 0px 40px 0px;
 
+    color: var(--white-color);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.features-list {
+    display: flex;
+}
+.features-list li+li {
+    margin-left: 30px;
+}
 .features-title {
+    margin: 0px 0px 10px 0px;
+    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -140,28 +189,46 @@ h1,h2,h3,h4,h5,h6 {
     text-transform: uppercase;
 }
 .features-text {
+    margin: 0px;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-
 .what-we-do-title {
+    margin: 94px auto 50px auto;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
 }
-
+.what-we-do-list {
+    display: flex;
+}
+.what-we-do-list li+li {
+    margin-left: 30px;
+}
+.our-team-section {
+    background-color: var(--secondary-bcg);
+}
 .our-team-title {
+    margin: 94px auto 50px auto;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+}
+.our-team-list {
+    display: flex;
 }
 .our-team-subtitle {
+    margin: 30px 80px 10px 80px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -169,6 +236,8 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.03em;
 }
 .our-team-text {
+    margin: 0px auto 10px 0px;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
