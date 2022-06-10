@@ -201,6 +201,18 @@ h1,h2,h3,h4,h5,h6 {
 
     background-color: var(--white-color);
 }
+.features-hidden-title {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 .features-list {
     display: flex;
 }
@@ -304,6 +316,18 @@ h1,h2,h3,h4,h5,h6 {
     padding-top: 100px;
     padding-bottom: 94px;
     border-top: 1px solid #ECECEC;
+}
+.portfolio-hidden-title {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 .portfolio-btn-list {
     display: flex;
